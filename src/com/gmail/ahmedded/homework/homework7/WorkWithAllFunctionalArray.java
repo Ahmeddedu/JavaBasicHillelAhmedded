@@ -24,9 +24,10 @@ public class WorkWithAllFunctionalArray {
         int MinIndex = 0;
         int MidlNumber1or2 = 0;
         int MidlNumberAll = 0;
+        int MidlNumberAllEnd = 0;
 
         for (int i = 0; i < numbersArray.length; i++) {
-            numbersArray[i] = random.nextInt(1, 101);
+            numbersArray[i] = random.nextInt(-100, 101);
         }
 
         for (int i = 0; i < numbersArray.length; i++) {
@@ -103,7 +104,8 @@ public class WorkWithAllFunctionalArray {
 
         if (MidlNumber1or2 == 1) {
             for (int i = 0; i < numbersArray.length; i++) {
-                MidlNumberAll = (MidlNumberAll + numbersArray[i]) / numbersArray.length;
+                MidlNumberAll = (MidlNumberAll + numbersArray[i]);
+                MidlNumberAllEnd = MidlNumberAll / numbersArray.length;
             }
             System.out.println("Midl number = " + MidlNumberAll);
         } else if (MidlNumber1or2 == 2) {
