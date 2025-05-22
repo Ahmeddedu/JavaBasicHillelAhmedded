@@ -8,10 +8,10 @@ public class DoubleArray {
 
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
-        int sumArrayDoublesColumn = 0;
-        int sumArrayUnpairedColumn = 0;
-        int sumArrayDoublesRow = 0;
-        int sumArrayUnpairedRow = 0;
+        int sumEvenRows = 0;
+        int sumOddRows = 0;
+        int sumEvenColumns = 0;
+        int sumOddColumns = 0;
 
         System.out.print("Whitch size in a column in array do you want ? Type only number : ");
         int sizeArrayColumn = scanner.nextInt();
@@ -40,28 +40,28 @@ public class DoubleArray {
         for (int i = 0; i < sizeArrayColumn; i++) {
             for (int j = 0; j < sizeArrayRaw; j++) {
                 if(i % 2 == 0){
-                    sumArrayDoublesColumn += matrix[i][j];
+                    sumEvenRows += matrix[i][j];
                 }
                 if(i % 2 != 0){
-                    sumArrayUnpairedColumn += matrix[i][j];
+                    sumOddRows += matrix[i][j];
                 }
             }
         }
-        System.out.println("Sum in Doubles column = " +  sumArrayDoublesColumn);
-        System.out.println("Sum in Unpaired column = " +  sumArrayUnpairedColumn);
+        System.out.println("Sum in Doubles column = " +  sumEvenRows);
+        System.out.println("Sum in Unpaired column = " +  sumOddRows);
 
         for (int i = 0; i < sizeArrayColumn; i++) {
             for (int j = 0; j < sizeArrayRaw; j++) {
                 if(j % 2 == 0){
-                    sumArrayDoublesRow += matrix[i][j];
+                    sumEvenColumns += matrix[i][j];
                 }
                 if(j % 2 != 0){
-                    sumArrayUnpairedRow += matrix[i][j];
+                    sumOddColumns += matrix[i][j];
                 }
             }
         }
-        System.out.println("Sum in Doubles column = " +   sumArrayDoublesRow);
-        System.out.println("Sum in Unpaired column = " + sumArrayUnpairedRow);
+        System.out.println("Sum in Doubles column = " +   sumEvenColumns);
+        System.out.println("Sum in Unpaired column = " + sumOddColumns);
 
     }
 }
