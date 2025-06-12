@@ -13,4 +13,5 @@ public class Triangle implements Shape {
     public double getArea() {
         return 0.5 * base * height;
     }
+
 }
