@@ -14,6 +14,7 @@ public class Baza {
         System.out.print("Which number do you want ?");
         int number = scanner.nextInt();
 
+        if
         
     }
 }
